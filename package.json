@@ -1,0 +1,53 @@
+{
+    "name": "frontend-life",
+    "version": "1.0.0",
+    "description": "这是life项目",
+    "private": true,
+    "scripts": {
+        "start": "concurrently -r -s first --kill-others \"npm run server\" \"npm run watch\" ",
+        "watch": "lx-scripts dev --watch",
+        "server": "cross-env NODE_ENV=development DEBUG=kwai* ./node_modules/nodemon/bin/nodemon.js ./server/index.js",
+        "pm2:test": "DEBUG=kwai* npm run pm2",
+        "pm2": "node ./server/pm2.js",
+        "build:test": "lx-scripts dev",
+        "build": "lx-scripts build",
+        "test": "lx-scripts test",
+        "eslint": "lx-scripts eslint src server",
+        "format-eslint": "lx-scripts eslint -c .eslintrc.js \"{src,server}/**/*.{js,vue}\" \"*.js\" --fix",
+        "format-prettier": "prettier \"src/**/*.{css,less,vue}\" \"*.md\" --write",
+        "format": "npm run format-prettier && npm run format-eslint"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,vue}": [
+            "lx-scripts eslint --fix",
+            "git add"
+        ],
+        "*.{css,less,md}": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "dependencies": {
+        "@lianxin/node-core": "^1.0.0"
+    },
+    "devDependencies": {
+        "@lianxin/browserslist-config": "^1.0.0",
+        "@lianxin/eslint-config": "^1.0.0",
+        "@lianxin/lx-scripts": "^1.0.1",
+        "@lianxin/prettier-config": "^1.0.0",
+        "@vue/test-utils": "^1.0.0-beta.29",
+        "concurrently": "^4.1.0",
+        "cross-env": "^7.0.3",
+        "husky": "^3.0.0",
+        "lint-staged": "^9.0.2",
+        "nodemon": "^1.19.0",
+        "prettier": "^1.18.2",
+        "vue": "^2.6.10",
+        "webpack-bundle-analyzer": "^3.3.2"
+    }
+}

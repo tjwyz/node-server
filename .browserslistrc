@@ -1,0 +1,7 @@
+# Browsers that we support
+
+[production]
+extends @lianxin/browserslist-config
+
+[development]
+extends @lianxin/browserslist-config/dev

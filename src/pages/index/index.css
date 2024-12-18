@@ -1,0 +1,8 @@
+html,
+body {
+    margin: 0;
+}
+
+.babel {
+    background: transparent url(../../assets/img/babel.png) center top/cover;
+}

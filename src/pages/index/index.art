@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+    <head>
+        {{include '../../common/widgets/h5HeadMeta.art'}}
+        <title> frontend-life </title>
+    </head>
+    <body>
+        <div id="app"></div>
+    </body>
+</html>

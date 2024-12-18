@@ -1,0 +1,14 @@
+<meta name="referrer" content="always">
+<meta charset="utf-8">
+<meta name="viewport" content="
+width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="//ali.static.yximgs.com/s1/i/favicon-eb2e5f4482.ico" type="image/x-icon">
+<script type="text/javascript">
+(function a() {
+    var width = Math.min(document.documentElement.clientWidth, 750);
+    var e = width / 7.5;
+    document.documentElement.style.fontSize = e + 'px';
+    window.addEventListener('resize', a);
+})();
+</script>
